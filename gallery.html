@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gallery - Lata Mangeshkar Tribute</title>
+  <style>
+    body {
+      background-color: rgb(245, 245, 220);
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background-color: rgb(230, 230, 250);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 1em;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 1em;
+    }
+
+    nav a {
+      padding: 0.5em 1em;
+      background-color: rgb(255, 215, 0);
+      color: #000;
+      text-decoration: none;
+      border-radius: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #f0b000;
+    }
+
+    header {
+      text-align: center;
+      padding: 2em 1em;
+      background: linear-gradient(to right, rgb(230, 230, 250), rgb(255, 182, 193));
+      color: #222;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 0.5em;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 40px auto;
+      max-width: 800px;
+      padding-bottom: 40px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 6px;
+      height: 100%;
+      background-color: rgb(255, 215, 0);
+      z-index: -1;
+    }
+
+    .timeline-item {
+      position: relative;
+      width: calc(50% - 20px);
+      margin: 20px 0;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: rgb(230, 230, 250);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .timeline-item:nth-child(odd) {
+      float: left;
+      clear: right;
+      text-align: right;
+    }
+
+    .timeline-item:nth-child(even) {
+      float: right;
+      clear: left;
+      text-align: left;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 25px;
+      height: 6px;
+      background-color: rgb(255, 215, 0);
+    }
+
+    .timeline-item:nth-child(odd)::after {
+      right: -25px;
+    }
+
+    .timeline-item:nth-child(even)::after {
+      left: -25px;
+    }
+
+    .timeline-item img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .timeline-item p {
+      margin: 0;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      background-color: rgb(230, 230, 250);
+      margin-top: auto;
+      font-size: 0.9em;
+    }
+
+    @media screen and (max-width: 768px) {
+      .timeline-item {
+        width: 100%;
+        text-align: center;
+        float: none;
+        clear: none;
+      }
+
+      .timeline-item::after {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Gallery</h1>
+    <p>A Visual Journey Through Lata Mangeshkar's Legacy</p>
+  </header>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <img src="lata_in_her_early_days.png" alt="Lata Mangeshkar in her early days">
+      <p>Lata Mangeshkar in her early days, setting the foundation for an illustrious career.</p>
+    </div>
+    <div class="timeline-item">
+      <img src="award.png" alt="Lata receiving a prestigious award">
+      <p>Receiving one of her many awards, a testament to her unparalleled talent.</p>
+    </div>
+    <div class="timeline-item">
+      <img src="recording.png" alt="Lata Mangeshkar in a recording studio">
+      <p>In the recording studio, creating timeless melodies that resonate with generations.</p>
+    </div>
+    <div class="timeline-item">
+      <img src="legends.png" alt="Lata Mangeshkar with other music legends">
+      <p>Sharing moments with other legendary artists of Indian music.</p>
+    </div>
+    <div class="timeline-item">
+      <img src="live.png" alt="Lata Mangeshkar performing live">
+      <p>Performing live and captivating the audience with her magical voice.</p>
+    </div>
+    <div class="timeline-item">
+      <img src="padma.png" alt="Lata Mangeshkar receiving the Bharat Ratna">
+      <p>Honored with the Bharat Ratna, India's highest civilian award.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; Tribute to Lata Mangeshkar. All rights reserved.
+  </footer>
+
+</body>
+</html>
